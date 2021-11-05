@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://samer-alkhabbaz.ml/schema",
+  "title": "customer",
+  "description": "The schema describes a customer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The full name of the customer",
+      "type": "string"
+    },
+    "age": {
+      "description": "The customer's age in years",
+      "type": "integer",
+      "minimum": 0
+    },
+    "orders": {
+      "description": "A list of products the customer has ordered",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "A unique identifier for a product",
+            "type": "number"
+          },
+          "name": {
+            "description": "A product's name",
+            "type": "string"
+          },
+          "count": {
+            "description": "The number of products in an order",
+            "type": "number"
+          }
+        },
+        "required": ["id"]
+      }
+    }
+  },
+  "required": ["name"]
+}

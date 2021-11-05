@@ -1,0 +1,9 @@
+name: samer
+age: 20
+orders:
+  - id: 1
+    name: apple
+    count: 3
+  - id: 2
+    name: banana
+    count: 5
